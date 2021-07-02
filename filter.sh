@@ -31,7 +31,7 @@ do
 			then
 				if [[ "${arr[1]}" == *"KB"* ]]  || [[ "${arr[1]}" == *"MB"* ]]		 || [[ "${arr[1]}" == *"GB"* ]]					
 				then
-					if [[ "${arr[2]}" != *"index.php"* ]] || [[ "${arr[2]}" != *"favicon"* ]] || [[ "${arr[2]}" != *"crossdomain.xml"* ]]	 	
+					if [[ "${arr[2]}" != *"index.php"* ]] && [[ "${arr[2]}" != *"favicon"* ]] && [[ "${arr[2]}" != *"crossdomain.xml"* ]] && [[ "${arr[2]}" != *"apostas.betfair.com"* ]] && [[ "${arr[2]}" != *"nintendo.com.au"* ]]	 	
 					then
 						echo ${arr[2]} >> $fileNameOutput
 					fi
@@ -53,5 +53,6 @@ do
 done < "$filename"
 
 echo "Output at: "$fileNameOutput
+subl $fileNameOutput
 
 
